@@ -1,0 +1,76 @@
+<form (ngSubmit)="save()" #filmModel="ngForm">
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-content>
+        <mat-form-field>
+          <mat-label>Názov filmu</mat-label>
+          <input matInput [(ngModel)]="editedFilm.nazov" name="nazov" required minlength="1" #nameModel="ngModel">
+          <mat-error>
+            @if(nameModel.errors) {
+              @if(nameModel.errors['required']) {
+                Názov filmu je potrebný  
+              } @else if (nameModel.errors['minlength']) {
+                Názov filmu musí mať aspoň {{nameModel.errors['minlength']}} znak
+              }
+            }
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Rok</mat-label>
+          <input matInput type="rok" [(ngModel)]="editedFilm.rok" name="rok"  required minlength="4" required maxlength="4" #rokModel="ngModel" >
+          <mat-error>
+            @if(rokModel.errors) {
+              @if(rokModel.errors['required']) {
+                Rok je potrebný  
+              }@else if (rokModel.errors['minlength']) {
+                Rok musí mať aspoň {{rokModel.errors['minlength']['requiredLength']}} znaky
+              } 
+            }
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Slovenský názov filmu</mat-label>
+          <input matInput [(ngModel)]="editedFilm.slovenskyNazov" name="SlovenskyNazov" required minlength="1" #nameSModel="ngModel">
+          <mat-error>
+            @if(nameSModel.errors) {
+              @if(nameSModel.errors['required']) {
+                Názov filmu je potrebný  
+              } @else if (nameSModel.errors['minlength']) {
+                Názov filmu musí mať aspoň {{nameSModel.errors['minlength']}} znak
+              }
+            }
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>imdbID</mat-label>
+          <input matInput [(ngModel)]="editedFilm.imdbID" name="imbdID">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Reziser</mat-label>
+          <input matInput [(ngModel)]="editedFilm.reziser" name="reziser">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Postavy</mat-label>
+          <input matInput [(ngModel)]="editedFilm.postava" name="postava">
+        </mat-form-field>
+
+
+        <mat-form-field>
+          <mat-label>AFI 1998</mat-label>
+          <input matInput [(ngModel)]="editedFilm.poradieVRebricku" name="afi1998">
+        </mat-form-field>
+
+         <mat-form-field>
+         <mat-label>AFI 2007</mat-label>
+          <input matInput [(ngModel)]="editedFilm.poradieVRebricku" name="afi2007">
+        </mat-form-field>
+        
+      </mat-card-content>
+      <mat-card-actions>
+        <button type="submit" mat-button [disabled]="filmModel.invalid">Save film</button>
+      </mat-card-actions>
+    </mat-card>
+    </form>
