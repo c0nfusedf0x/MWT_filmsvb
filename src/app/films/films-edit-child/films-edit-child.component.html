@@ -49,23 +49,25 @@
 
         <mat-form-field>
           <mat-label>Reziser</mat-label>
-          <input matInput [(ngModel)]="editedFilm.reziser" name="reziser">
+          <input matInput [(ngModel)]="reziser" name="reziser">
+          <mat-hint>Zápis: ID:Krstné meno:Stredné meno:Priezvisko</mat-hint>
         </mat-form-field>
 
         <mat-form-field>
           <mat-label>Postavy</mat-label>
-          <input matInput [(ngModel)]="editedFilm.postava" name="postava">
+          <input matInput [(ngModel)]="postavy" name="postava">
+          <mat-hint>Zápis: Postava:hlavná postava/vedľajšia postava:ID herca:Krstné meno herca:Stredné meno herca:Priezvisko herca</mat-hint>
         </mat-form-field>
 
 
         <mat-form-field>
           <mat-label>AFI 1998</mat-label>
-          <input matInput [(ngModel)]="editedFilm.poradieVRebricku" name="afi1998">
+          <input matInput [(ngModel)]="afi1998" name="afi1998">
         </mat-form-field>
 
          <mat-form-field>
          <mat-label>AFI 2007</mat-label>
-          <input matInput [(ngModel)]="editedFilm.poradieVRebricku" name="afi2007">
+          <input matInput [(ngModel)]="afi2007" name="afi2007">
         </mat-form-field>
         
       </mat-card-content>

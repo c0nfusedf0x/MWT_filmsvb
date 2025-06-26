@@ -1,4 +1,4 @@
 <h2>Editácia filmu: {{film?.nazov}}</h2>
 @if(film){
-   <app-films-edit-child [filmToEdit]="film" (toSave)="saveFilm($event)"></app-films-edit-child>
+   <app-films-edit-child [filmToEdit]="film" [allFilms]="films" (toSave)="saveFilm($event)"></app-films-edit-child>
 }

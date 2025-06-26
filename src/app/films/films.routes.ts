@@ -9,7 +9,7 @@ import { authAsyncGuard } from "../../guards/auth-async.guard";
 export const FILMS_ROUTES : Routes = [
     { path: '',
       children:[
-        { path: '', component: FilmsComponent},
+        { path: '', component: FilmsComponent,pathMatch:'full'},
         { path: 'new', component: FilmsNewComponent,canActivate:[authAsyncGuard],},
         { path: 'edit/:id', component: FilmsEditComponent,canActivate:[authAsyncGuard],},
       ] },

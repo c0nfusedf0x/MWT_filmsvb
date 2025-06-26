@@ -16,11 +16,12 @@ export class FilmsEditComponent implements OnInit{
   router= inject(Router);
   filmsService =inject(FilmsService);
   film?: Film;
+  films: Film[] = [];
 
   ngOnInit(): void {
     this.route.paramMap.pipe(
       map(params => Number(params.get('id'))),
-      switchMap(filmId => this.filmsService.getFilm(filmId))).subscribe(film =>this.film= film)
+      switchMap(filmId => this.filmsService.getFilm(filmId))).subscribe(film =>this.film= film);
   }
 
   saveFilm(filmToSave: Film){

@@ -91,39 +91,17 @@ export default class FilmsComponent implements AfterViewInit,OnInit {
 //---------------------------------------------------------------------
 vybratyFilm = signal<Film | undefined>(undefined);
 
-ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      const id = Number(params.get('id'));
-      if (id) {
-        this.filmsService.getFilm(id).subscribe(film => {
-          this.vybratyFilm.set(film);
-        });
-      } else {
-        this.vybratyFilm.set(undefined);
-      }
-    });
+ngOnInit():void {
+    this.deleteFilm;
   }
-
-editFilm(film: Film) {
-  this.vybratyFilm.set(film);
-}
-saveFilm(filmToSave: Film){
-  console.log('Saving film:', filmToSave);
-  this.filmsService.saveFilm(filmToSave).subscribe({
-    next: () => {
-      console.log('Film saved successfully');
-      this.router.navigate(['../../'], { relativeTo: this.route });
-    },
-    error: err => console.error('Save film error:', err)
-  });
-}
+  
 deleteFilm(film:Film){
   const dialogRef = this.dialog.open(ConfirmDialogComponent, { 
                       data: new ConfirmDialogData('Deleting film', 
                         'Are you sure you want to delete film '+ film.nazov +'?')});
       dialogRef.afterClosed().subscribe((result:boolean) => {
         if (result) {
-          this.filmsService.deleteFilm(film).subscribe(success => {
+          this.filmsService.deleteFilm(film.id!).subscribe(success => {
             this.msgService.success('Film '+ film.nazov +' deleted');
             this.filmsResource.reload();
           })

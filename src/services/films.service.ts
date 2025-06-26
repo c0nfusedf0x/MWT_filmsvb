@@ -17,15 +17,14 @@ export class FilmsService {
     return this.usersService.token;
   }
 
-  getTokenHeader(): {headers?: {[header: string]: string},
+   getTokenHeader(): {headers?: {[header: string]: string},
                      params?: HttpParams} | undefined {
     if (!this.token) {
       return undefined;
     }
-    return {headers: 
-      {'Authorization': `Bearer ${this.token}`,
-      'X-Auth-Token': this.token}}
+    return {headers: {'X-Auth-Token': this.token}}
   }
+
 
   getFilms(orderBy?: string, descending?: boolean, indexFrom?: number, indexTo?: number, search?:string): Observable<FilmsResponse> {
     let options = this.getTokenHeader();
@@ -71,8 +70,8 @@ export class FilmsService {
 }
 
 updateFilm(film: Film): Observable<Film> {
-  return this.http.put<Film>(
-    this.url + 'films/' + film.id,
+  return this.http.post<Film>(
+    this.url + 'films',
     film,
     this.getTokenHeader()
   ).pipe(
@@ -81,13 +80,19 @@ updateFilm(film: Film): Observable<Film> {
   );
 }
 
-  deleteFilm(film: Film):Observable<Boolean>{
-    return this.http.delete<void>(this.url + 'film/' + film.id, this.getTokenHeader()).pipe(
+  deleteFilm(id: number): Observable<boolean> {
+    return this.http.delete<void>(this.url + 'films/' + id + '/' + this.token, this.getTokenHeader()).pipe(
       map(() => true),
       catchError(error => this.usersService.processError(error))
     );
-
   }
+  getFilms1(): Observable<Film[]> {
+      return this.http.get<Film[]>(this.url + 'films').pipe(
+        map(jsonGroups => jsonGroups.map(jsonGroup => Film.clone(jsonGroup))),
+        catchError(error => this.usersService.processError(error))
+      );
+    }
+
 
 }
 

@@ -1,4 +1,39 @@
 [ {
+  "id" : 125,
+  "nazov" : "z1",
+  "slovenskyNazov" : "z1",
+  "rok" : 2000,
+  "imdbID" : "imbdID",
+  "reziser" : [ {
+    "id" : 30,
+    "krstneMeno" : "Janko",
+    "stredneMeno" : "null",
+    "priezvisko" : "Hrasko"
+  } ],
+  "postava" : [ {
+    "postava" : "Anna",
+    "dolezitost" : "hlavná postava",
+    "herec" : {
+      "id" : 100,
+      "krstneMeno" : "Neviem",
+      "stredneMeno" : "null",
+      "priezvisko" : "Neviem"
+    }
+  }, {
+    "postava" : "Jacob",
+    "dolezitost" : "vedľajšia postava",
+    "herec" : {
+      "id" : 101,
+      "krstneMeno" : "IDK",
+      "stredneMeno" : "null",
+      "priezvisko" : "IDK"
+    }
+  } ],
+  "poradieVRebricku" : {
+    "AFI 1998" : 23,
+    "AFI 2007" : 101
+  }
+}, {
   "id" : 123,
   "nazov" : "Yankee Doodle Dandy",
   "slovenskyNazov" : "Yankee Doodle Dandy",
@@ -7,7 +42,7 @@
   "reziser" : [ {
     "id" : 19,
     "krstneMeno" : "Michael",
-    "stredneMeno" : null,
+    "stredneMeno" : "null",
     "priezvisko" : "Curtiz"
   } ],
   "postava" : [ {
@@ -16,7 +51,7 @@
     "herec" : {
       "id" : 513,
       "krstneMeno" : "James",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Cagney"
     }
   }, {
@@ -25,7 +60,7 @@
     "herec" : {
       "id" : 3136,
       "krstneMeno" : "Minor",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Watson"
     }
   }, {
@@ -34,7 +69,7 @@
     "herec" : {
       "id" : 2967,
       "krstneMeno" : "George",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Tobias"
     }
   }, {
@@ -43,7 +78,7 @@
     "herec" : {
       "id" : 1102,
       "krstneMeno" : "Eddie (Jr.)",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Foy"
     }
   }, {
@@ -52,7 +87,7 @@
     "herec" : {
       "id" : 249,
       "krstneMeno" : "George",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Barbier"
     }
   }, {
@@ -61,7 +96,7 @@
     "herec" : {
       "id" : 1954,
       "krstneMeno" : "Irene",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Manning"
     }
   }, {
@@ -70,7 +105,7 @@
     "herec" : {
       "id" : 741,
       "krstneMeno" : "Douglas",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Croft"
     }
   }, {
@@ -79,7 +114,7 @@
     "herec" : {
       "id" : 649,
       "krstneMeno" : "Chester",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Clute"
     }
   }, {
@@ -88,7 +123,7 @@
     "herec" : {
       "id" : 1521,
       "krstneMeno" : "Walter",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Huston"
     }
   }, {
@@ -97,7 +132,7 @@
     "herec" : {
       "id" : 514,
       "krstneMeno" : "Jeanne",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Cagney"
     }
   }, {
@@ -106,7 +141,7 @@
     "herec" : {
       "id" : 2349,
       "krstneMeno" : "Patsy",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Parsons"
     }
   }, {
@@ -115,7 +150,7 @@
     "herec" : {
       "id" : 2213,
       "krstneMeno" : "Odette",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Myrtil"
     }
   }, {
@@ -124,7 +159,7 @@
     "herec" : {
       "id" : 1822,
       "krstneMeno" : "Joan",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Leslie"
     }
   }, {
@@ -133,7 +168,7 @@
     "herec" : {
       "id" : 832,
       "krstneMeno" : "Rosemary",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "DeCamp"
     }
   }, {
@@ -142,7 +177,7 @@
     "herec" : {
       "id" : 3194,
       "krstneMeno" : "Richard",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Whorf"
     }
   }, {
@@ -160,7 +195,7 @@
     "herec" : {
       "id" : 1767,
       "krstneMeno" : "Frances",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Langford"
     }
   }, {
@@ -169,7 +204,7 @@
     "herec" : {
       "id" : 3300,
       "krstneMeno" : "Jack",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Young"
     }
   }, {
@@ -178,7 +213,7 @@
     "herec" : {
       "id" : 580,
       "krstneMeno" : "Walter",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Catlett"
     }
   } ],
@@ -337,7 +372,7 @@
   "reziser" : [ {
     "id" : 61,
     "krstneMeno" : "Mike",
-    "stredneMeno" : null,
+    "stredneMeno" : "null",
     "priezvisko" : "Nichols"
   } ],
   "postava" : [ {
@@ -346,7 +381,7 @@
     "herec" : {
       "id" : 497,
       "krstneMeno" : "Richard",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Burton"
     }
   }, {
@@ -355,7 +390,7 @@
     "herec" : {
       "id" : 2931,
       "krstneMeno" : "Elizabeth",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Taylor"
     }
   }, {
@@ -364,7 +399,7 @@
     "herec" : {
       "id" : 857,
       "krstneMeno" : "Sandy",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Dennis"
     }
   }, {
@@ -373,7 +408,7 @@
     "herec" : {
       "id" : 2711,
       "krstneMeno" : "George",
-      "stredneMeno" : null,
+      "stredneMeno" : "null",
       "priezvisko" : "Segal"
     }
   } ],
