@@ -10,7 +10,7 @@ export const FILMS_ROUTES : Routes = [
     { path: '',
       children:[
         { path: '', component: FilmsComponent,pathMatch:'full'},
-        { path: 'new', component: FilmsNewComponent,canActivate:[authAsyncGuard],},
+        { path: 'new', component: FilmsNewComponent,canActivate:[authAsyncGuard],data: {newFilm: true}},
         { path: 'edit/:id', component: FilmsEditComponent,canActivate:[authAsyncGuard],},
       ] },
 ];

@@ -34528,4 +34528,27 @@
   "poradieVRebricku" : {
     "AFI 2007" : 87
   }
+}, {
+  "id" : 126,
+  "nazov" : "z2",
+  "slovenskyNazov" : "z2",
+  "rok" : 1998,
+  "imdbID" : "333333333",
+  "reziser" : [ {
+    "id" : 0,
+    "krstneMeno" : null,
+    "stredneMeno" : null,
+    "priezvisko" : null
+  } ],
+  "postava" : [ {
+    "postava" : "",
+    "dolezitost" : null,
+    "herec" : {
+      "id" : 0,
+      "krstneMeno" : null,
+      "stredneMeno" : null,
+      "priezvisko" : null
+    }
+  } ],
+  "poradieVRebricku" : { }
 } ]

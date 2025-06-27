@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { catchError, map, Observable } from 'rxjs';
+import { catchError, EMPTY, map, Observable } from 'rxjs';
 import { Film } from '../entities/film';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from '../environments/environment';
@@ -81,7 +81,7 @@ updateFilm(film: Film): Observable<Film> {
 }
 
   deleteFilm(id: number): Observable<boolean> {
-    return this.http.delete<void>(this.url + 'films/' + id + '/' + this.token, this.getTokenHeader()).pipe(
+    return this.http.delete<void>(this.url + 'films/' + id, this.getTokenHeader()).pipe(
       map(() => true),
       catchError(error => this.usersService.processError(error))
     );
