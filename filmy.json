@@ -3,7 +3,7 @@
   "nazov" : "z1",
   "slovenskyNazov" : "z1",
   "rok" : 2000,
-  "imdbID" : "imbdID",
+  "imdbID" : "000000000",
   "reziser" : [ {
     "id" : 30,
     "krstneMeno" : "Janko",
@@ -30,7 +30,7 @@
     }
   } ],
   "poradieVRebricku" : {
-    "AFI 1998" : 23,
+    "AFI 1998" : 101,
     "AFI 2007" : 101
   }
 }, {

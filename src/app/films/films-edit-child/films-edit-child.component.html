@@ -44,7 +44,14 @@
 
         <mat-form-field>
           <mat-label>imdbID</mat-label>
-          <input matInput [(ngModel)]="editedFilm.imdbID" name="imbdID">
+          <input matInput [(ngModel)]="editedFilm.imdbID" name="imbdID" required maxlength="9" #imdIDModel="ngModel">
+          <mat-error>
+          @if(nameSModel.errors) {
+            @if(nameSModel.errors['maxlength']) {
+              ImbdID môže mať mať najviac {{nameSModel.errors['minlength']}} znakov
+          }
+        }
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field>

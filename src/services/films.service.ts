@@ -86,13 +86,6 @@ updateFilm(film: Film): Observable<Film> {
       catchError(error => this.usersService.processError(error))
     );
   }
-  getFilms1(): Observable<Film[]> {
-      return this.http.get<Film[]>(this.url + 'films').pipe(
-        map(jsonGroups => jsonGroups.map(jsonGroup => Film.clone(jsonGroup))),
-        catchError(error => this.usersService.processError(error))
-      );
-    }
-
 
 }
 

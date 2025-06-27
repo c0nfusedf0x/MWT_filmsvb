@@ -16,7 +16,6 @@ export class FilmsEditComponent implements OnInit{
   router= inject(Router);
   filmsService =inject(FilmsService);
   film?: Film;
-  films: Film[] = [];
 
   ngOnInit(): void {
     this.route.paramMap.pipe(
@@ -27,8 +26,6 @@ export class FilmsEditComponent implements OnInit{
   saveFilm(filmToSave: Film){
     this.filmsService.saveFilm(filmToSave).subscribe(() => {
   this.router.navigate(['../../'], { relativeTo: this.route });});
-    
-
   }
 
 
