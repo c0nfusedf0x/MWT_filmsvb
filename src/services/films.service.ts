@@ -51,15 +51,7 @@ export class FilmsService {
   }
 
   saveFilm(film: Film):Observable<Film>{
-    if (film.id) {
-    return this.updateFilm(film);
-  } else {
-    return this.addFilm(film);
-  }
-  }
-
-  addFilm(film: Film): Observable<Film> {
-  return this.http.post<Film>(
+    return this.http.post<Film>(
     this.url + 'films',
     film,
     this.getTokenHeader()
@@ -67,18 +59,8 @@ export class FilmsService {
     map(jsonFilm => Film.clone(jsonFilm)),
     catchError(err => this.usersService.processError(err))
   );
-}
+  }
 
-updateFilm(film: Film): Observable<Film> {
-  return this.http.post<Film>(
-    this.url + 'films',
-    film,
-    this.getTokenHeader()
-  ).pipe(
-    map(jsonFilm => Film.clone(jsonFilm)),
-    catchError(err => this.usersService.processError(err))
-  );
-}
 
   deleteFilm(id: number): Observable<boolean> {
     return this.http.delete<void>(this.url + 'films/' + id, this.getTokenHeader()).pipe(
