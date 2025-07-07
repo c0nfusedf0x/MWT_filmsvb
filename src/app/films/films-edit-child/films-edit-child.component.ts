@@ -19,8 +19,8 @@ export class FilmsEditChildComponent implements OnChanges{
   reziser: string = '';
   postavy: string ='';
   poradieText: string = '';
-  afi1998: string = '';
-  afi2007: string = '';
+  afi1998: number = 0;
+  afi2007: number = 0;
 
   ngOnChanges() {
     this.editedFilm = Film.clone(this.film);
@@ -36,8 +36,8 @@ export class FilmsEditChildComponent implements OnChanges{
   this.poradieText = Object.entries(this.editedFilm.poradieVRebricku)
     .map(([k, v]) => `${k}:${v}`).join(', ');
     
-    this.afi1998 = this.editedFilm.poradieVRebricku['AFI 1998']?.toString() || '';
-    this.afi2007 = this.editedFilm.poradieVRebricku['AFI 2007']?.toString() || '';
+    this.afi1998 = Number( this.editedFilm.poradieVRebricku['AFI 1998']) || 0;
+    this.afi2007 = Number(this.editedFilm.poradieVRebricku['AFI 2007'])|| 0;
   }
 
   save(){
