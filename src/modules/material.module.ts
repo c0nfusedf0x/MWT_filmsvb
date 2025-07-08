@@ -11,6 +11,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatAutocompleteModule, MatOption } from '@angular/material/autocomplete';
+import { MatSelectModule } from '@angular/material/select';
 
 const modules = [
   MatDialogModule,
@@ -24,7 +26,9 @@ const modules = [
   MatTabsModule,
   MatCardModule,
   MatListModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatAutocompleteModule,
+  MatSelectModule
 ];
 
 @NgModule({

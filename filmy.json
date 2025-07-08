@@ -1,4 +1,36 @@
 [ {
+  "id" : 127,
+  "nazov" : "z2",
+  "slovenskyNazov" : "z2",
+  "rok" : 2000,
+  "imdbID" : "111111111",
+  "reziser" : [ {
+    "id" : 40,
+    "krstneMeno" : "Alex",
+    "stredneMeno" : "null",
+    "priezvisko" : "Alexej"
+  } ],
+  "postava" : [ {
+    "postava" : "Jana",
+    "dolezitost" : "hlavná postava",
+    "herec" : {
+      "id" : 0,
+      "krstneMeno" : "Isabella",
+      "stredneMeno" : "null",
+      "priezvisko" : "Nejaka"
+    }
+  }, {
+    "postava" : "Jožo",
+    "dolezitost" : "vedľajšia postava",
+    "herec" : {
+      "id" : 0,
+      "krstneMeno" : "Artur",
+      "stredneMeno" : "null",
+      "priezvisko" : "Neznamy"
+    }
+  } ],
+  "poradieVRebricku" : { }
+}, {
   "id" : 125,
   "nazov" : "z1",
   "slovenskyNazov" : "z1",
@@ -9,6 +41,11 @@
     "krstneMeno" : "Janko",
     "stredneMeno" : "null",
     "priezvisko" : "Hrasko"
+  }, {
+    "id" : 31,
+    "krstneMeno" : "Miki",
+    "stredneMeno" : "null",
+    "priezvisko" : "Miki"
   } ],
   "postava" : [ {
     "postava" : "Anna",
@@ -30,7 +67,6 @@
     }
   } ],
   "poradieVRebricku" : {
-    "AFI 1998" : null,
     "AFI 2007" : 102
   }
 }, {
@@ -34528,27 +34564,4 @@
   "poradieVRebricku" : {
     "AFI 2007" : 87
   }
-}, {
-  "id" : 126,
-  "nazov" : "z2",
-  "slovenskyNazov" : "z2",
-  "rok" : 1998,
-  "imdbID" : "333333333",
-  "reziser" : [ {
-    "id" : 0,
-    "krstneMeno" : null,
-    "stredneMeno" : null,
-    "priezvisko" : null
-  } ],
-  "postava" : [ {
-    "postava" : "",
-    "dolezitost" : null,
-    "herec" : {
-      "id" : 0,
-      "krstneMeno" : null,
-      "stredneMeno" : null,
-      "priezvisko" : null
-    }
-  } ],
-  "poradieVRebricku" : { }
 } ]

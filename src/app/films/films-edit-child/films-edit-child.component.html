@@ -1,6 +1,7 @@
 <form (ngSubmit)="save()" #filmModel="ngForm">
     <mat-card class="example-card" appearance="outlined">
       <mat-card-content>
+        <h3>Film</h3>
         <mat-form-field>
           <mat-label>Názov filmu</mat-label>
           <input matInput [(ngModel)]="editedFilm.nazov" name="nazov" required minlength="1" #nameModel="ngModel">
@@ -54,19 +55,65 @@
           </mat-error>
         </mat-form-field>
 
+      <h3>Režiséri</h3>
+      <div *ngFor="let r of editedFilm.reziser; let i = index">
+          <mat-form-field>
+            <mat-label>ID režiséra</mat-label>
+            <input matInput [(ngModel)]="r.id" name="reziserId{{i}}">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Krstné meno režiséra</mat-label>
+            <input matInput [(ngModel)]="r.krstneMeno" name="reziserKrstne{{i}}">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Stredné meno režiséra</mat-label>
+            <input matInput [(ngModel)]="r.stredneMeno" name="reziserStredne{{i}}">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Priezvisko režiséra</mat-label>
+            <input matInput [(ngModel)]="r.priezvisko" name="reziserPriezvisko{{i}}">
+          </mat-form-field>
+          <button mat-raised-button type="button" (click)="removeReziser(i)">Odstrániť</button>
+          <p></p> <!-- toto tu  je len aby  bol priestor ked sa prida novy reziser, len aby to lepsie vizualne vyzeralo-->
+      </div>
+      <button mat-raised-button type="button" (click)="addReziser()">Pridať</button>
+
+      <h3>Postavy</h3>
+      <div *ngFor="let p of editedFilm.postava; let j = index">
         <mat-form-field>
-          <mat-label>Reziser</mat-label>
-          <input matInput [(ngModel)]="reziser" name="reziser">
-          <mat-hint>Zápis: ID:Krstné meno:Stredné meno:Priezvisko</mat-hint>
+            <mat-label>Meno postavy</mat-label>
+            <input matInput [(ngModel)]="p.postava" name="postavaMeno{{j}}">
         </mat-form-field>
-
         <mat-form-field>
-          <mat-label>Postavy</mat-label>
-          <input matInput [(ngModel)]="postavy" name="postava">
-          <mat-hint>Zápis: Postava:hlavná postava/vedľajšia postava:ID herca:Krstné meno herca:Stredné meno herca:Priezvisko herca</mat-hint>
+          <mat-label>Dôležitosť</mat-label>
+          <mat-select [(ngModel)]="p.dolezitost" name="dolezitost{{j}}">
+            <mat-option value="hlavná postava">hlavná postava</mat-option>
+            <mat-option value="vedľajšia postava">vedľajšia postava</mat-option>
+          </mat-select>
+       </mat-form-field>
+       <mat-form-field>
+            <mat-label>ID herca</mat-label>
+            <input matInput [(ngModel)]="p.herec.id" name="herecID{{j}}">
         </mat-form-field>
+        <mat-form-field>
+            <mat-label>Meno herca</mat-label>
+            <input matInput [(ngModel)]="p.herec.krstneMeno" name="herecMeno{{j}}">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Stredné meno herca</mat-label>
+            <input matInput [(ngModel)]="p.herec.stredneMeno" name="herecSMeno{{j}}">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Priezvisko herca</mat-label>
+            <input matInput [(ngModel)]="p.herec.priezvisko" name="herecPriezvisko{{j}}">
+        </mat-form-field>
+        <button mat-raised-button type="button" (click)="removePostava(j)">Odstrániť</button>
+        <p></p> <!-- toto tu  je len aby  bol priestor ked sa prida nova postava, len aby to lepsie vizualne vyzeralo-->
+      </div>
+      <button mat-raised-button type="button" (click)="addPostava()">Pridať</button>
 
 
+      <h3>Rebríčky</h3>
         <mat-form-field>
           <mat-label>AFI 1998</mat-label>
           <input matInput [(ngModel)]="afi1998" name="afi1998">
